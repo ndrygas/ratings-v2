@@ -29,7 +29,7 @@ class Movie(db.Model):
 
     movie_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     title = db.Column(db.String, unique=True, nullable=False)
-    password = db.Column(db.String, nullable=False)
+    overview = db.Column(db.String, nullable=False)
     release_date = db.Column(db.DateTime, nullable=False)
     poster_path = db.Column(db.String, nullable=False)
 
@@ -72,5 +72,7 @@ if __name__ == "__main__":
     # Call connect_to_db(app, echo=False) if your program output gets
     # too annoying; this will tell SQLAlchemy not to print out every
     # query it executes.
+    
+
 
     connect_to_db(app)
